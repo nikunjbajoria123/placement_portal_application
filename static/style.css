@@ -1,0 +1,31 @@
+body{
+background:#f4f6f9;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+.card{
+border-radius:12px;
+box-shadow:0 4px 12px rgba(0,0,0,0.08);
+}
+
+.table{
+background:white;
+border-radius:10px;
+overflow:hidden;
+}
+
+h2{
+font-weight:600;
+}
+
+.btn{
+border-radius:8px;
+}
+
+.navbar-brand{
+font-size:20px;
+}
+
+footer{
+font-size:14px;
+}

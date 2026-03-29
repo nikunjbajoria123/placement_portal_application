@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Student Dashboard</h2>
+
+<table class="table table-striped table-hover">
+
+<tr>
+<th>ID</th>
+<th>Job Title</th>
+<th>Eligibility</th>
+<th>Deadline</th>
+<th>Apply</th>
+</tr>
+
+{% for drive in drives %}
+
+<tr>
+
+<td>{{drive.id}}</td>
+
+<td>{{drive.job_title}}</td>
+
+<td>{{drive.eligibility}}</td>
+
+<td>{{drive.deadline}}</td>
+
+<td>
+
+<a href="/apply/{{drive.id}}/1" class="btn btn-primary btn-sm">
+Apply
+</a>
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}

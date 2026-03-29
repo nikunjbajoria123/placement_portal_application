@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Student Registration</h2>
+
+<div class="card p-4">
+
+<form method="POST">
+
+<input name="name" class="form-control mb-3" placeholder="Full Name" required>
+<input name="email" class="form-control mb-3" placeholder="Email" required>
+<input type="password" name="password" class="form-control mb-3" placeholder="Password" required>
+<input name="phone" class="form-control mb-3" placeholder="Phone Number">
+<input name="branch" class="form-control mb-3" placeholder="Branch">
+<input name="cgpa" class="form-control mb-3" placeholder="CGPA">
+
+<button class="btn btn-success w-100">
+Register
+</button>
+
+</form>
+</div>
+
+{% endblock %}

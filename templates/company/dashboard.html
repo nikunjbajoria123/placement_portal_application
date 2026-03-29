@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h2 class="mb-4">Company Dashboard</h2>
+
+<a href="/company/create_drive" class="btn btn-success mb-3">
+Create Placement Drive
+</a>
+
+<table class="table table-striped table-hover">
+
+<tr>
+<th>ID</th>
+<th>Job Title</th>
+<th>Eligibility</th>
+<th>Deadline</th>
+<th>Status</th>
+</tr>
+
+{% for drive in drives %}
+
+<tr>
+
+<td>{{drive.id}}</td>
+
+<td>{{drive.job_title}}</td>
+
+<td>{{drive.eligibility}}</td>
+
+<td>{{drive.deadline}}</td>
+
+<td>
+
+{% if drive.status == "Pending" %}
+
+<span class="badge bg-warning">Pending</span>
+
+{% else %}
+
+<span class="badge bg-success">Approved</span>
+
+{% endif %}
+
+</td>
+
+</tr>
+
+{% endfor %}
+
+</table>
+
+{% endblock %}
